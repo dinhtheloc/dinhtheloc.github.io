@@ -1,0 +1,47 @@
+/* Trang pháp lý của Pip Pip (GitHub Pages). Màu theo bảng Mực & chanh của app. */
+:root {
+  --paper: #f6f4ef;
+  --surface: #ffffff;
+  --ink: #16181d;
+  --ink2: #4a4e57;
+  --border: #e3e0d8;
+  --accent: #c8f031;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0e1013;
+    --surface: #1b1e23;
+    --ink: #f2f1ec;
+    --ink2: #b4b6bc;
+    --border: #2b2f36;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Be Vietnam Pro", "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.mark {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--accent); color: #16181d;
+  display: grid; place-items: center; font-weight: 800;
+}
+h1 { font-size: 28px; line-height: 1.25; margin: 24px 0 4px; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+h3 { font-size: 17px; margin: 20px 0 4px; }
+p, li { color: var(--ink); }
+.meta, .note { color: var(--ink2); font-size: 14px; }
+nav.lang a, a { color: inherit; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+nav.lang { font-size: 14px; color: var(--ink2); }
+section.lang-block { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 8px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; background: var(--surface); border-radius: 12px; overflow: hidden; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+th { font-weight: 700; }
+ul.links { list-style: none; padding: 0; }
+ul.links li { margin: 8px 0; }
