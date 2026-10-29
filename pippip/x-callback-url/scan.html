@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pip Pip · Quét một mã / Scan a code</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<header><div class="mark" aria-hidden="true">P</div><strong>Pip Pip</strong></header>
+<nav class="lang"><a href="#vi">Tiếng Việt</a> · <a href="#en">English</a></nav>
+
+<!-- Trang dự phòng của universal link x-callback-url (D283): máy đã cài Pip Pip mở thẳng app khi người dùng chạm link, nên trang
+     này chỉ hiện khi chưa cài app, hay khi link mở ngay trong trình duyệt (gõ tay, trình duyệt trong app khác). Nút "Mở trong
+     Pip Pip" chuyển nguyên query sang scheme `pippip://x-callback-url/scan`; app tự kiểm yêu cầu và hỏi trước khi gửi. -->
+
+<section id="vi" lang="vi">
+<h1>Quét một mã bằng Pip Pip</h1>
+<p>Một ứng dụng hoặc website nhờ Pip Pip quét một mã rồi gửi lại nội dung của mã đó. Pip Pip luôn hỏi bạn trước khi gửi.</p>
+<p>Trên iPhone, iPad đã cài Pip Pip, link này mở thẳng màn quét của Pip Pip.</p>
+<ul class="links">
+<li>Đã cài Pip Pip? <a data-open-app href="pippip://x-callback-url/scan">Mở trong Pip Pip</a></li>
+<li>Chưa có Pip Pip? <a href="https://apps.apple.com/app/id6827655014">Tải trên App Store</a></li>
+<li><a href="../">Hỗ trợ</a></li>
+</ul>
+</section>
+
+<section id="en" lang="en" class="lang-block">
+<h1>Scan a code with Pip Pip</h1>
+<p>An app or website asked Pip Pip to scan a code and send back its contents. Pip Pip always asks you before sending.</p>
+<p>On an iPhone or iPad with Pip Pip installed, this link opens Pip Pip’s scanner directly.</p>
+<ul class="links">
+<li>Have Pip Pip? <a data-open-app href="pippip://x-callback-url/scan">Open in Pip Pip</a></li>
+<li>Don’t have Pip Pip? <a href="https://apps.apple.com/app/id6827655014">Download on the App Store</a></li>
+<li><a href="../">Support</a></li>
+</ul>
+</section>
+</main>
+<script>
+  // Giữ nguyên yêu cầu (x-success…) khi mở bằng scheme của app.
+  for (const link of document.querySelectorAll("a[data-open-app]")) {
+    link.href = "pippip://x-callback-url/scan" + location.search;
+  }
+</script>
+</body>
+</html>
