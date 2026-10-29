@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["K94TBBRL9V.com.locdinh.pippip"],
+        "appIDs": ["K94TBBRL9V.com.locdinh.pippip", "K94TBBRL9V.com.locdinh.pippip.dev"],
         "components": [
           { "/": "/pippip/x-callback-url/*" }
         ]
