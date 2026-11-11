@@ -1,21 +1,148 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pip Pip</title>
-<link rel="stylesheet" href="pippip/style.css">
+<title>LOC DINH ©2026</title>
+<meta name="description" content="Loc Dinh is a software engineer who designs, builds and ships small iOS apps with big character: Chillbara and Pip Pip.">
+<meta property="og:title" content="LOC DINH ©2026">
+<meta property="og:description" content="Small apps with big character. Chillbara, Pip Pip and more.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0c0e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23c8f031'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='900' text-anchor='middle' fill='%230b0c0e'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,500;125,800&family=Be+Vietnam+Pro:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script>
+document.documentElement.classList.add("js");
+try { var l = localStorage.getItem("lang"); if (l === "vi" || l === "en") { document.documentElement.dataset.lang = l; document.documentElement.lang = l; } } catch (e) {}
+</script>
 </head>
 <body>
-<main>
-<header><div class="mark" aria-hidden="true">P</div><strong>Pip Pip</strong></header>
-<h1>Pip Pip</h1>
-<p>Quét và tạo mã QR, mã vạch trên iPhone, iPad. · Scan and create QR codes and barcodes on iPhone and iPad.</p>
-<ul class="links">
-<li><a href="pippip/privacy.html">Chính sách quyền riêng tư · Privacy Policy</a></li>
-<li><a href="pippip/terms.html">Điều khoản dịch vụ · Terms of Service</a></li>
-<li>Hỗ trợ · Support: <a href="mailto:pippip.support@gmail.com">pippip.support@gmail.com</a></li>
-</ul>
+
+<div class="grid" aria-hidden="true"></div>
+
+<header class="hud top">
+  <a class="brand" href="#top">LOCDINH<span>©26</span></a>
+  <nav aria-label="Primary">
+    <a href="#work"><span data-l="en">WORK</span><span data-l="vi">DỰ ÁN</span></a>
+    <a href="#contact"><span data-l="en">CONTACT</span><span data-l="vi">LIÊN HỆ</span></a>
+    <span class="lang" role="group" aria-label="Language"><i>LANG</i>[<button type="button" data-set="en" aria-pressed="true">EN</button>/<button type="button" data-set="vi" aria-pressed="false">VI</button>]</span>
+  </nav>
+</header>
+<div class="hud bottom" aria-hidden="true">
+  <span id="clock">GMT+7 VN --:--</span>
+  <span id="coords">0000 X 0000 Y</span>
+  <span class="dot"></span>
+</div>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="glow" aria-hidden="true"></div>
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <div class="hero-top">
+      <p class="lead">Software<br>Engineer</p>
+      <p class="mono">
+        <span data-l="en">Small apps.<br>Built with care.</span>
+        <span data-l="vi">App nhỏ.<br>Làm thật kỹ.</span>
+      </p>
+      <p class="mono intro">
+        <span data-l="en" class="scr">I'm Loc Dinh, a software engineer in Ho Chi Minh City. I design, build and ship my own iOS apps, start to finish.</span>
+        <span data-l="vi" class="scr">Tôi là Lộc, kỹ sư phần mềm ở TP. Hồ Chí Minh. Tôi tự thiết kế, tự code và tự phát hành các app iOS của mình.</span>
+      </p>
+    </div>
+    <h1>
+      <span data-l="en"><span class="ln">I build small</span><span class="ln">apps with big</span><span class="ln">character <em>©26</em></span></span>
+      <span data-l="vi"><span class="ln">Tôi làm app</span><span class="ln">nhỏ mà</span><span class="ln">có chất <em>©26</em></span></span>
+    </h1>
+  </section>
+
+  <section id="work" class="work">
+    <p class="statement reveal">
+      <span data-l="en">I'm building <a href="#chillbara">Chillbara</a>, a cozy focus timer where a capybara soaks while you work. Also <a href="pippip/">Pip Pip</a>, a QR scanner.</span>
+      <span data-l="vi">Tôi đang làm <a href="#chillbara">Chillbara</a>, app hẹn giờ tập trung có chú capybara ngâm suối trong lúc bạn làm việc. Và cả <a href="pippip/">Pip Pip</a>, app quét QR.</span>
+    </p>
+
+    <div class="tiles">
+
+      <div class="tile big reveal" id="chillbara">
+        <div class="art chill">
+          <span class="tag"><span data-l="en">COMING SOON</span><span data-l="vi">SẮP RA MẮT</span></span>
+          <div class="steam" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <img class="icon" src="assets/chillbara-icon.webp" width="512" height="512" alt="Chillbara app icon: a capybara soaking in a hot spring with a rubber duck on its head">
+        </div>
+        <div class="cap"><span>CHILLBARA</span><span>2026</span><span><span data-l="en">FOCUS TIMER · IPHONE</span><span data-l="vi">HẸN GIỜ TẬP TRUNG · IPHONE</span></span></div>
+        <h3>
+          <span data-l="en">You focus. Chillbara soaks.</span>
+          <span data-l="vi">Bạn tập trung. Chillbara ngâm suối.</span>
+        </h3>
+        <p>
+          <span data-l="en">Start a session and Chillbara slips into the hot spring. Stay focused and visitors drop by to keep it company; leave too early and the moment is gone. A calm little reason to put the phone down.</span>
+          <span data-l="vi">Bắt đầu một phiên là Chillbara xuống suối nóng. Bạn giữ tập trung thì khách ghé chơi cùng; bỏ ngang thì lỡ mất. Một lý do nhẹ nhàng để đặt điện thoại xuống.</span>
+        </p>
+      </div>
+
+      <a class="tile reveal" href="pippip/">
+        <div class="art pip">
+          <span class="tag">IOS APP</span>
+          <img class="icon" src="assets/pippip-icon.png" width="512" height="512" alt="Pip Pip app icon: a QR code and a barcode crossed by a red scan line">
+        </div>
+        <div class="cap"><span>PIP PIP</span><span>2026</span><span><span data-l="en">QR AND BARCODES</span><span data-l="vi">QR VÀ MÃ VẠCH</span> ↗</span></div>
+        <p>
+          <span data-l="en">Scan and create QR codes and barcodes on iPhone and iPad.</span>
+          <span data-l="vi">Quét và tạo mã QR, mã vạch trên iPhone, iPad.</span>
+        </p>
+      </a>
+
+      <div class="tile reveal">
+        <div class="art next">
+          <span class="tag"><span data-l="en">IN THE LAB</span><span data-l="vi">ĐANG THỬ NGHIỆM</span></span>
+          <div class="plus"></div>
+        </div>
+        <div class="cap"><span><span data-l="en">NEXT</span><span data-l="vi">TIẾP THEO</span></span><span>20XX</span><span>???</span></div>
+        <p>
+          <span data-l="en">More on the way.</span>
+          <span data-l="vi">Sẽ còn nữa.</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="warp" aria-label="Principles">
+    <div class="pin">
+      <canvas id="warp" aria-hidden="true"></canvas>
+      <h2 class="shout">
+        <span data-l="en">Make it<br>feel<br>alive</span>
+        <span data-l="vi">Làm cho<br>nó<br>sống động</span>
+      </h2>
+      <ul class="rules">
+        <li><span data-l="en">Open fast.<br>Stay out of the way.</span><span data-l="vi">Mở thật nhanh.<br>Không cản đường.</span></li>
+        <li><span data-l="en">One person,<br>whole product.</span><span data-l="vi">Một người,<br>trọn sản phẩm.</span></li>
+        <li><span data-l="en">Details you feel<br>before you notice.</span><span data-l="vi">Chi tiết để cảm thấy,<br>trước khi kịp nhận ra.</span></li>
+        <li><span data-l="en">Ship small.<br>Keep polishing.</span><span data-l="vi">Ra bản nhỏ.<br>Mài giũa mãi.</span></li>
+      </ul>
+    </div>
+  </section>
+
 </main>
+
+<footer id="contact" class="contact">
+  <p class="mono"><span data-l="en">GOT AN IDEA, OR JUST WANT TO SAY HI?</span><span data-l="vi">CÓ Ý TƯỞNG, HAY CHỈ MUỐN CHÀO MỘT CÂU?</span></p>
+  <a class="mail" href="mailto:locdtptit@gmail.com">
+    <span data-l="en"><span class="ln">Let's</span><span class="ln">talk <em>↗</em></span></span>
+    <span data-l="vi"><span class="ln">Nói</span><span class="ln">chuyện nhé <em>↗</em></span></span>
+  </a>
+  <div class="foot mono">
+    <a href="mailto:locdtptit@gmail.com">LOCDTPTIT@GMAIL.COM</a>
+    <span><span data-l="en">HO CHI MINH CITY, VIETNAM</span><span data-l="vi">TP. HỒ CHÍ MINH, VIỆT NAM</span></span>
+    <span>© 2026 DINH THE LOC</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>
